@@ -7,4 +7,16 @@ public class Crust extends IngredientImpl{
   private Crust(String name, boolean isVegetarian, boolean isVegan) {
     super(name, isVegetarian, isVegan);
   }
+  public static Crust create(String name) {
+    switch (name) {
+      case "hand-tossed":
+        return HAND_TOSSED;
+      case "thin":
+        return THIN;
+      case "deep-dish":
+        return DEEP_DISH;
+      default:
+        throw new IllegalArgumentException("Invalid Crust name: " + name);
+    }
+  }
 }
