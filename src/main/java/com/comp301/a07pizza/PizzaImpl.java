@@ -75,11 +75,11 @@ public class PizzaImpl implements Pizza{
 
   @Override
   public Ingredient[] getToppings() {
-    return topping.toArray(new Ingredient[topping.size()]);
+    return topping.toArray(new Ingredient[0]);
   }
 
   @Override
   public Ingredient[] getIngredients() {
-    return allingredients.toArray(new Ingredient[allingredients.size()]);
+    return allingredients.toArray(new Ingredient[0]);
   }
 }
