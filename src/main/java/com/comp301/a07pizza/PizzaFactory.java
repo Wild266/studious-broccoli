@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class PizzaFactory {
 
   public static Pizza makeCheesePizza(Pizza.Size size) {
-    return new PizzaImpl(size, Crust.create("hand-tossed"), Sauce.create("tomato"), Cheese.create("blend"), new ArrayList<>());
+    return new PizzaImpl(size, Crust.create("hand-tossed"), Sauce.create("tomato"), Cheese.create("blend"), new ArrayList<Topping>());
   }
 
   public static Pizza makeHawaiianPizza(Pizza.Size size) {
