@@ -11,7 +11,8 @@ public class PizzaImpl implements Pizza {
   private static List<Topping> topping = new ArrayList<Topping>();
   private final List<Ingredient> allingredients = new ArrayList<Ingredient>();
 
-  public PizzaImpl(Pizza.Size size, Crust crust, Sauce sauce, Cheese cheese, List<Topping> topping) {
+  public PizzaImpl(
+          Pizza.Size size, Crust crust, Sauce sauce, Cheese cheese, List<Topping> topping) {
     PizzaImpl.size = size;
     PizzaImpl.crust = crust;
     PizzaImpl.sauce = sauce;
