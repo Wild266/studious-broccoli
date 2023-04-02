@@ -8,7 +8,7 @@ public class PizzaImpl implements Pizza{
   private static Crust crust = null;
   private static Sauce sauce = null;
   private static Cheese cheese = null;
-  private static List<Topping> topping = null;
+  private static List<Topping> topping = new ArrayList<>();
   private static List<Ingredient> allingredients = new ArrayList<Ingredient>();
 
   public PizzaImpl(Pizza.Size size, Crust crust, Sauce sauce, Cheese cheese, List<Topping> topping){
