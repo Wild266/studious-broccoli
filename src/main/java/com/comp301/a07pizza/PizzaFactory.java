@@ -7,10 +7,10 @@ public class PizzaFactory {
   public static Pizza makeCheesePizza(Pizza.Size size) {
     return new PizzaImpl(
         size,
-    Crust.create("hand-tossed"),
-    Sauce.create("tomato"),
-    Cheese.create("blend"),
-    new ArrayList<Topping>());
+        Crust.create("hand-tossed"),
+        Sauce.create("tomato"),
+        Cheese.create("blend"),
+        new ArrayList<Topping>());
   }
 
   public static Pizza makeHawaiianPizza(Pizza.Size size) {
@@ -19,10 +19,10 @@ public class PizzaFactory {
     tps.add(Topping.create("pineapple"));
     return new PizzaImpl(
         size,
-    Crust.create("hand-tossed"),
-    Sauce.create("tomato"),
-    Cheese.create("blend"),
-    tps);
+        Crust.create("hand-tossed"),
+        Sauce.create("tomato"),
+        Cheese.create("blend"),
+        tps);
   }
 
   public static Pizza makeMeatLoversPizza(Pizza.Size size) {
@@ -33,10 +33,10 @@ public class PizzaFactory {
     tps.add(Topping.create("ground beef"));
     return new PizzaImpl(
         size,
-    Crust.create("deep-dish"),
-    Sauce.create("tomato"),
-    Cheese.create("blend"),
-    tps);
+        Crust.create("deep-dish"),
+        Sauce.create("tomato"),
+        Cheese.create("blend"),
+        tps);
   }
 
   public static Pizza makeVeggieSupremePizza(Pizza.Size size) {
@@ -47,10 +47,10 @@ public class PizzaFactory {
     tps.add(Topping.create("olives"));
     return new PizzaImpl(
         size,
-    Crust.create("thin"),
-    Sauce.create("tomato"),
-    Cheese.create("blend"),
-    tps);
+        Crust.create("thin"),
+        Sauce.create("tomato"),
+        Cheese.create("blend"),
+        tps);
   }
 
   public static Pizza makeDailySpecialPizza() {
@@ -61,9 +61,9 @@ public class PizzaFactory {
     tps.add(Topping.create("olives"));
     return new PizzaImpl(
         Pizza.Size.LARGE,
-    Crust.create("thin"),
-    Sauce.create("tomato"),
-    Cheese.create("blend"),
-    tps);
+        Crust.create("thin"),
+        Sauce.create("tomato"),
+        Cheese.create("blend"),
+        tps);
   }
 }
