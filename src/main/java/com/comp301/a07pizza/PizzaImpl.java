@@ -8,10 +8,10 @@ public class PizzaImpl implements Pizza{
   private static Crust crust = null;
   private static Sauce sauce = null;
   private static Cheese cheese = null;
-  private static List<Topping> topping = new ArrayList<>();
+  private static List<Ingredient> topping = new ArrayList<Ingredient>();
   private static List<Ingredient> allingredients = new ArrayList<Ingredient>();
 
-  public PizzaImpl(Pizza.Size size, Crust crust, Sauce sauce, Cheese cheese, List<Topping> topping){
+  public PizzaImpl(Pizza.Size size, Crust crust, Sauce sauce, Cheese cheese, List<Ingredient> topping){
     this.size = size;
     this.crust = crust;
     this.sauce = sauce;
@@ -76,11 +76,11 @@ public class PizzaImpl implements Pizza{
 
   @Override
   public Ingredient[] getToppings() {
-    return (Ingredient[]) topping.toArray();
+    return topping.toArray(new Ingredient[topping.size()]);
   }
 
   @Override
   public Ingredient[] getIngredients() {
-    return (Ingredient[]) allingredients.toArray();
+    return allingredients.toArray(new Ingredient[allingredients.size()]);
   }
 }
