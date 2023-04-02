@@ -9,7 +9,7 @@ public class PizzaImpl implements Pizza{
   private static Sauce sauce = null;
   private static Cheese cheese = null;
   private static List<Topping> topping = new ArrayList<Topping>();
-  private static List<Ingredient> allingredients = new ArrayList<Ingredient>();
+  private List<Ingredient> allingredients = new ArrayList<Ingredient>();
 
   public PizzaImpl(Pizza.Size size, Crust crust, Sauce sauce, Cheese cheese, List<Topping> topping){
     PizzaImpl.size = size;
@@ -17,10 +17,10 @@ public class PizzaImpl implements Pizza{
     PizzaImpl.sauce = sauce;
     PizzaImpl.cheese = cheese;
     PizzaImpl.topping = topping;
-    allingredients.add(crust);
-    allingredients.add(sauce);
-    allingredients.add(cheese);
-    allingredients.addAll(topping);
+    this.allingredients.add(crust);
+    this.allingredients.add(sauce);
+    this.allingredients.add(cheese);
+    this.allingredients.addAll(topping);
   }
   @Override
   public boolean isVegetarian() {
@@ -75,11 +75,14 @@ public class PizzaImpl implements Pizza{
 
   @Override
   public Ingredient[] getToppings() {
-    return topping.toArray(new Ingredient[0]);
+    return topping.toArray(new Ingredient[topping.size()]);
   }
 
   @Override
   public Ingredient[] getIngredients() {
-    return allingredients.toArray(new Ingredient[0]);
+//    for (Ingredient i : allingredients){
+//      System.out.println(i.getName());
+//    }
+    return allingredients.toArray(new Ingredient[allingredients.size()]);
   }
 }
