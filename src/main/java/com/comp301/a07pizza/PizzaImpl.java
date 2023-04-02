@@ -3,7 +3,7 @@ package com.comp301.a07pizza;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PizzaImpl implements Pizza{
+public class PizzaImpl implements Pizza {
   private static Pizza.Size size = null;
   private static Crust crust = null;
   private static Sauce sauce = null;
@@ -11,7 +11,7 @@ public class PizzaImpl implements Pizza{
   private static List<Topping> topping = new ArrayList<Topping>();
   private List<Ingredient> allingredients = new ArrayList<Ingredient>();
 
-  public PizzaImpl(Pizza.Size size, Crust crust, Sauce sauce, Cheese cheese, List<Topping> topping){
+  public PizzaImpl(Pizza.Size size, Crust crust, Sauce sauce, Cheese cheese, List<Topping> topping) {
     PizzaImpl.size = size;
     PizzaImpl.crust = crust;
     PizzaImpl.sauce = sauce;
@@ -22,10 +22,11 @@ public class PizzaImpl implements Pizza{
     this.allingredients.add(cheese);
     this.allingredients.addAll(topping);
   }
+
   @Override
   public boolean isVegetarian() {
-    for (Ingredient i: allingredients){
-      if (!i.isVegetarian()){
+    for (Ingredient i : allingredients) {
+      if (!i.isVegetarian()) {
         return false;
       }
     }
@@ -34,8 +35,8 @@ public class PizzaImpl implements Pizza{
 
   @Override
   public boolean isVegan() {
-    for (Ingredient i: allingredients){
-      if (!i.isVegan()){
+    for (Ingredient i : allingredients) {
+      if (!i.isVegan()) {
         return false;
       }
     }
@@ -44,12 +45,12 @@ public class PizzaImpl implements Pizza{
 
   @Override
   public double getPrice() {
-    if (size==Size.SMALL){
-      return 7 + 0.25*topping.size();
-    } else if (size == Size.MEDIUM){
-      return 9 + .5* topping.size();
+    if (size == Size.SMALL) {
+      return 7 + 0.25 * topping.size();
+    } else if (size == Size.MEDIUM) {
+      return 9 + .5 * topping.size();
     } else {
-      return 11 + .75* topping.size();
+      return 11 + .75 * topping.size();
     }
   }
 
@@ -80,9 +81,6 @@ public class PizzaImpl implements Pizza{
 
   @Override
   public Ingredient[] getIngredients() {
-//    for (Ingredient i : allingredients){
-//      System.out.println(i.getName());
-//    }
     return allingredients.toArray(new Ingredient[allingredients.size()]);
   }
 }

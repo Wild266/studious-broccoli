@@ -1,6 +1,6 @@
 package com.comp301.a07pizza;
 
-public class Topping extends IngredientImpl{
+public class Topping extends IngredientImpl {
   public static final Topping TOMATO = new Topping("tomato", true, true);
   public static final Topping GARLIC = new Topping("garlic", true, true);
   public static final Topping MUSHROOMS = new Topping("mushrooms", true, true);
@@ -22,6 +22,7 @@ public class Topping extends IngredientImpl{
   private Topping(String name, boolean isVegetarian, boolean isVegan) {
     super(name, isVegetarian, isVegan);
   }
+
   public static Topping create(String name) {
     switch (name) {
       case "tomato":

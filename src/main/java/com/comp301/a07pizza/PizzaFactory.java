@@ -12,10 +12,6 @@ public class PizzaFactory {
     ArrayList<Topping> tps = new ArrayList<Topping>();
     tps.add(Topping.create("ham"));
     tps.add(Topping.create("pineapple"));
-//    for (Topping i: tps){
-//      System.out.println(i.getName());
-//    }
-//    System.out.println();
     return new PizzaImpl(size, Crust.create("hand-tossed"), Sauce.create("tomato"), Cheese.create("blend"), tps);
   }
 
