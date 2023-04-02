@@ -12,16 +12,15 @@ public class PizzaImpl implements Pizza{
   private static List<Ingredient> allingredients = new ArrayList<Ingredient>();
 
   public PizzaImpl(Pizza.Size size, Crust crust, Sauce sauce, Cheese cheese, List<Ingredient> topping){
-    this.size = size;
-    this.crust = crust;
-    this.sauce = sauce;
-    this.cheese = cheese;
-    this.topping = topping;
+    PizzaImpl.size = size;
+    PizzaImpl.crust = crust;
+    PizzaImpl.sauce = sauce;
+    PizzaImpl.cheese = cheese;
+    PizzaImpl.topping = topping;
     allingredients.add(crust);
     allingredients.add(sauce);
     allingredients.add(cheese);
     allingredients.addAll(topping);
-
   }
   @Override
   public boolean isVegetarian() {
@@ -56,22 +55,22 @@ public class PizzaImpl implements Pizza{
 
   @Override
   public Size getSize() {
-    return this.size;
+    return size;
   }
 
   @Override
   public Ingredient getSauce() {
-    return this.sauce;
+    return sauce;
   }
 
   @Override
   public Ingredient getCheese() {
-    return this.cheese;
+    return cheese;
   }
 
   @Override
   public Ingredient getCrust() {
-    return this.crust;
+    return crust;
   }
 
   @Override
